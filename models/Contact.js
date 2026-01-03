@@ -2,9 +2,9 @@ const mongoose = require("mongoose");
 
 const contactSchema = new mongoose.Schema({
   name: { type: String, required: true },
-  email: String,
+  email: { type: String }, // optional
   phone: { type: String, required: true },
-  message: String,
+  message: { type: String }, // optional
 });
 
 module.exports = mongoose.model("Contact", contactSchema);
